@@ -1,3 +1,5 @@
 function sumSalary(salaries) {
-  // ваш код...
+	return Object.values(salaries)
+		.filter(e => Number.isInteger(e))
+		.reduce((sum, e) => sum + e, 0);
 }
